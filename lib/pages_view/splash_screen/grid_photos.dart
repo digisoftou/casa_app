@@ -16,7 +16,7 @@ class GridPhotosMainScreen extends StatelessWidget {
           children: [
             Container(
               height: screenSize.height/5,
-              width: 80,
+              width: screenSize.width * 0.208,
               decoration: BoxDecoration(
                   color: Colors.grey.withOpacity(0.4),
                   borderRadius: const BorderRadius.only(
@@ -34,9 +34,9 @@ class GridPhotosMainScreen extends StatelessWidget {
               ),
             ),
             Container(
-              margin: const EdgeInsets.only(top: 10),
+              margin: const EdgeInsets.only(top: 8),
               height: screenSize.height/3,
-              width: 80,
+              width: screenSize.width * 0.208,
               decoration: BoxDecoration(
                   color: Colors.grey.withOpacity(0.5),
                   borderRadius: const BorderRadius.only(
@@ -56,9 +56,9 @@ class GridPhotosMainScreen extends StatelessWidget {
               ),
             ),
             Container(
-              margin: const EdgeInsets.only(top: 10),
+              margin: const EdgeInsets.only(top: 8),
               height: screenSize.height/5,
-              width: 80,
+              width: screenSize.width * 0.208,
               decoration: BoxDecoration(
                   color: Colors.grey.withOpacity(0.4),
                   borderRadius: const BorderRadius.only(
@@ -80,9 +80,9 @@ class GridPhotosMainScreen extends StatelessWidget {
         Column(
           children: [
             Container(
-              margin: const EdgeInsets.symmetric(horizontal: 10),
+              margin: const EdgeInsets.symmetric(horizontal: 8),
               height: screenSize.height/3,
-              width: screenSize.width/1.782,
+              width: screenSize.width * 0.58,
               decoration: BoxDecoration(
                   color: Colors.grey.withOpacity(0.8),
                   borderRadius: const BorderRadius.only(
@@ -102,9 +102,9 @@ class GridPhotosMainScreen extends StatelessWidget {
               ),
             ),
             Container(
-              margin: const EdgeInsets.all(10),
+              margin: const EdgeInsets.all(8),
               height: screenSize.height/2.5,
-              width: screenSize.width/1.782,
+              width: screenSize.width * 0.58,
               decoration: BoxDecoration(
                   color: Colors.grey.withOpacity(0.8),
                   borderRadius: const BorderRadius.only(
@@ -131,7 +131,7 @@ class GridPhotosMainScreen extends StatelessWidget {
           children: [
             Container(
               height: screenSize.height/5,
-              width: 80,
+              width: screenSize.width * 0.208,
               decoration: BoxDecoration(
                   color: Colors.grey.withOpacity(0.4),
                   borderRadius: const BorderRadius.only(
@@ -149,9 +149,9 @@ class GridPhotosMainScreen extends StatelessWidget {
               ),
             ),
             Container(
-              margin: const EdgeInsets.only(top: 10),
+              margin: const EdgeInsets.only(top: 8),
               height: screenSize.height/3,
-              width: 80,
+              width: screenSize.width * 0.208,
               decoration: BoxDecoration(
                   color: Colors.grey.withOpacity(0.5),
                   borderRadius: const BorderRadius.only(
@@ -171,9 +171,9 @@ class GridPhotosMainScreen extends StatelessWidget {
               ),
             ),
             Container(
-              margin: const EdgeInsets.only(top: 10),
+              margin: const EdgeInsets.only(top: 8),
               height: screenSize.height/5,
-              width: 80,
+              width: screenSize.width * 0.208,
               decoration: BoxDecoration(
                   color: Colors.grey.withOpacity(0.4),
                   borderRadius: const BorderRadius.only(

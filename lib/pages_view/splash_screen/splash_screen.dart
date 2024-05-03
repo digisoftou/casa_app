@@ -5,7 +5,7 @@ import 'package:casa_app/pages_view/splash_screen/promo_screen.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget  {
-  const SplashScreen({Key? key}) : super(key: key);
+  const SplashScreen({super.key});
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
     super.initState();
     controller = AnimationController(
         vsync: this,
-      duration: Duration(seconds: 3)
+      duration: const Duration(seconds: 3)
     );
     fadeAnimation = Tween(
       begin: 0.0,
@@ -39,7 +39,7 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
 
     animationController = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 5),
+      duration: const Duration(seconds: 5),
     );
     tween = Tween<double>(begin: 10, end: 3);
     final Animation<double> curve = CurvedAnimation(
@@ -57,11 +57,11 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
     final screenSize = MediaQuery.of(context).size;
 
 
-    Future.delayed(Duration(seconds: 5), () {
+    Future.delayed(const Duration(seconds: 5), () {
       if (mounted) {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => PromoPage()),
+          MaterialPageRoute(builder: (context) => const PromoPage()),
         );
       }
     });
@@ -70,19 +70,22 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
       backgroundColor: CasaColors.whiteBackground,
       body: Stack(
         children: [
-          CustomPaint(
-            painter: SplashPainter(animation, screenSize.height, screenSize.width),
-            child: SizedBox.expand(),
-          ),
+          // CustomPaint(
+          //   painter: SplashPainter(animation, screenSize.height, screenSize.width),
+          //   child: SizedBox.expand(),
+          // ),
           Center(
-            child: Container(
+            child: SizedBox(
               width: screenSize.width - 40,
               height: screenSize.width - 40,
               child: StatefulBuilder(
                 builder: (context, setState) {
                   return FadeTransition(
                     opacity: fadeAnimation,
-                    child: Image.asset('assets/logo/9cd85e748dd94a37d9e800b321312986.png'),
+                    child: Image.asset(
+                        'assets/logo/9cd85e748dd94a37d9e800b321312986.png',
+                      fit: BoxFit.cover,
+                    ),
                   );
                 },
               ),

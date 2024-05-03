@@ -47,8 +47,8 @@ class SavedScreen extends StatelessWidget {
                               }
                           ),
                         ),
-                        SizedBox(height: 5,),
-                        Expanded(
+                        const SizedBox(height: 5,),
+                        const Expanded(
                             child: TabBarView(
                               children: [
                                 ProductsSaved(),

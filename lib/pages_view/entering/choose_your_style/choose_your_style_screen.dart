@@ -1,9 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:casa_app/CasaColors.dart';
 import 'package:casa_app/models/style_model.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ChooseYourStyleScreen extends StatefulWidget {
@@ -29,15 +27,15 @@ class _ChooseYourStyleScreenState extends State<ChooseYourStyleScreen> {
     return Scaffold(
       backgroundColor: CasaColors.whiteBackground,
       body: Container(
-        margin: EdgeInsets.only(top: 70),
+        margin: const EdgeInsets.only(top: 70),
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.only(right: 30),
+              margin: const EdgeInsets.only(right: 30),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
+                  SizedBox(
                     height: 50,
                     width: 150,
                     child: Image.asset(
@@ -48,7 +46,7 @@ class _ChooseYourStyleScreenState extends State<ChooseYourStyleScreen> {
                   ),
                   IconButton(
                       onPressed: (){},
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.close,
                         color: CasaColors.iconsColor,
                       ))
@@ -67,7 +65,7 @@ class _ChooseYourStyleScreenState extends State<ChooseYourStyleScreen> {
               alignment: Alignment.centerLeft,
               child: Text(
                 AppLocalizations.of(context)!.chooseStyle,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.w500
                 ),
@@ -85,17 +83,18 @@ class _ChooseYourStyleScreenState extends State<ChooseYourStyleScreen> {
                           padEnds: false,
                         height: 320,
                         viewportFraction: 0.8,
+                        enlargeFactor: 0.2,
                         enlargeCenterPage: true,
                         pageSnapping: true,
                         initialPage: 0,
-                        enableInfiniteScroll: false
+                        enableInfiniteScroll: false,
                       ),
                       itemBuilder: (context, itemIndex, pageViewUndex){
                         return Stack(
                           children: [
                             ClipRRect(
                               borderRadius: BorderRadius.circular(14),
-                              child: Container(
+                              child: SizedBox(
                                   width: screenSize.width / 1.5,
                                   height: screenSize.height / 2.43,
                                   child:Image.asset(
@@ -112,7 +111,7 @@ class _ChooseYourStyleScreenState extends State<ChooseYourStyleScreen> {
                                 children: [
                                   Text(
                                       stylesList[itemIndex].name,
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         color: CasaColors.white,
                                         fontWeight: FontWeight.w500,
                                         fontSize: 18,
@@ -120,7 +119,7 @@ class _ChooseYourStyleScreenState extends State<ChooseYourStyleScreen> {
                                   ),
                                   Text(
                                     stylesList[itemIndex].description,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       color: CasaColors.white,
                                       fontWeight: FontWeight.w300,
                                       fontSize: 14,
@@ -129,7 +128,7 @@ class _ChooseYourStyleScreenState extends State<ChooseYourStyleScreen> {
                                 ],
                               ),
                             ),
-                            Positioned(
+                            const Positioned(
                                 bottom: 30,
                                 right: 20,
                                 child: Icon(
@@ -161,7 +160,7 @@ class _ChooseYourStyleScreenState extends State<ChooseYourStyleScreen> {
                 stylesList.length < 10
                   ? '0$currentStyleIndex/0${stylesList.length}'
                   : '$currentStyleIndex/${stylesList.length}',
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w400,
                   color: CasaColors.textLightGrey
@@ -169,7 +168,7 @@ class _ChooseYourStyleScreenState extends State<ChooseYourStyleScreen> {
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 30),
+              margin: const EdgeInsets.symmetric(horizontal: 30),
               child: LinearProgressIndicator(
                 minHeight: 2,
                 backgroundColor: CasaColors.linearIndicatorBg,
@@ -199,7 +198,7 @@ class _ChooseYourStyleScreenState extends State<ChooseYourStyleScreen> {
                   margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 80),
                   child: Text(
                     AppLocalizations.of(context)!.nextButtonTitle,
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: Colors.white,
                         fontSize: 18,
                         fontWeight: FontWeight.w500

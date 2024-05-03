@@ -1,8 +1,5 @@
 
-import 'dart:ui';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -20,9 +17,9 @@ class SignInScreen extends StatelessWidget {
       backgroundColor: CasaColors.whiteBackground,
       body: Stack(
         children: [
-          Positioned(
+          const Positioned(
               top: 0,
-              child: const GridPhotosMainScreen()
+              child: GridPhotosMainScreen()
           ),
           Container(
             width: screenSize.width,
@@ -32,7 +29,7 @@ class SignInScreen extends StatelessWidget {
                 colors: [CasaColors.whiteBackground.withOpacity(0.2), CasaColors.whiteBackground],
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                stops: [0.0, 0.35],
+                stops: const [0.0, 0.35],
               ),
             ),
             child: Container(
@@ -65,7 +62,7 @@ class SignInScreen extends StatelessWidget {
                           fontWeight: FontWeight.w400,
                           color: CasaColors.textGrey,
                         ),
-                        contentPadding: EdgeInsets.symmetric(vertical: 6, horizontal: 10),
+                        contentPadding: const EdgeInsets.symmetric(vertical: 6, horizontal: 10),
                       ),
                     ),
                   ),
@@ -80,14 +77,14 @@ class SignInScreen extends StatelessWidget {
                     ),
                     child: TextField(
                       decoration: InputDecoration(
-                        border: InputBorder.none, // Без контура
+                        border: InputBorder.none,
                         hintText: AppLocalizations.of(context)!.password,
-                        hintStyle: TextStyle(
+                        hintStyle: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w400,
                             color: CasaColors.textGrey
                         ),
-                        contentPadding: EdgeInsets.symmetric(vertical: 6, horizontal: 10),
+                        contentPadding: const EdgeInsets.symmetric(vertical: 6, horizontal: 10),
                       ),
                     ),
                   ),
@@ -234,7 +231,7 @@ class SignInScreen extends StatelessWidget {
                         margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 80),
                         child: Text(
                           AppLocalizations.of(context)!.nextButtonTitle,
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Colors.white,
                               fontSize: 18,
                               fontWeight: FontWeight.w500

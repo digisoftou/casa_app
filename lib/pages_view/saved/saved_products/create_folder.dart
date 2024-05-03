@@ -13,7 +13,7 @@ class CreateFolderContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
-    return Container(
+    return SizedBox(
       height: screenSize.width/2.5,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,7 +35,7 @@ class CreateFolderContainer extends StatelessWidget {
                 child:  Container(
                     width: 50,
                     height: 50,
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color: Colors.transparent,
@@ -51,10 +51,10 @@ class CreateFolderContainer extends StatelessWidget {
               )
 
           ),
-          SizedBox(height: 4,),
+          const SizedBox(height: 4,),
           Text(
             AppLocalizations.of(context)!.createFolder,
-            style: TextStyle(
+            style: const TextStyle(
                 color: CasaColors.folderNameColor,
                 fontSize: 16,
                 fontWeight: FontWeight.w600

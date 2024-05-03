@@ -1,8 +1,6 @@
 
 import 'package:casa_app/CasaColors.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'grid_photos.dart';
 
@@ -17,9 +15,9 @@ class PromoPage extends StatelessWidget {
         backgroundColor: CasaColors.whiteBackground,
         body: Stack(
           children: [
-            Positioned(
+            const Positioned(
                 top: 0,
-                child: const GridPhotosMainScreen()
+                child: GridPhotosMainScreen()
             ),
             Positioned(
               bottom: 0,
@@ -39,7 +37,7 @@ class PromoPage extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Container(
+                    SizedBox(
                       height: 100,
                       width: 200,
                       child: Image.asset(
@@ -87,7 +85,7 @@ class PromoPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                      SizedBox(height: 20,),
+                      const SizedBox(height: 20,),
                   ],
                 ),
               ),

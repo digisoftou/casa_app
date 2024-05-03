@@ -45,26 +45,18 @@ class _BottomNavBarState extends State<BottomNavBar> {
         floatingActionButtonLocation: FloatingActionButtonLocation.miniCenterDocked,
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            Navigator.pushNamed(context, "/addPost");
+           // Navigator.pushNamed(context, "/addPost");
           },
           elevation: 10,
           backgroundColor: Colors.black,
-          child: Icon(
+          shape: const CircleBorder(),
+          child: const Icon(
             Icons.add,
             color: Colors.white,
             size: 30,
           ),
-          shape: const CircleBorder(),
         ),
       bottomNavigationBar: AnimatedBottomNavigationBar.builder(
-        // icons:
-        // [
-        //   Icons.home,
-        //   Icons.shopping_bag_rounded,
-        //   Icons.flag,
-        //   Icons.person_rounded
-        // ],
-        // iconSize: 30,
         itemCount: iconList.length,
         tabBuilder: (int index, bool isActive){
           return Padding(
@@ -105,113 +97,6 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
     );
 
-
-    //   Scaffold(
-    //   extendBody: true,
-    //   body: pages[_bottomNavIndex],
-    //   bottomNavigationBar: BottomAppBar(
-    //     elevation: 0,
-    //     padding: EdgeInsets.all(0),
-    //     shape: const CircularNotchedRectangle(),
-    //     notchMargin: 3,
-    //     clipBehavior: Clip.antiAlias,
-    //     child:  AnimatedBottomNavigationBar( // navigation bar
-    //     icons: [
-    //       Icons.ice_skating_sharp,
-    //       Icons.ice_skating_sharp,
-    //       Icons.ice_skating_sharp,
-    //       Icons.ice_skating_sharp,
-    //     ],
-    //     leftCornerRadius: 34,
-    //     rightCornerRadius: 34,
-    //     height: 80,
-    //     activeIndex: _bottomNavIndex,
-    //     gapLocation: GapLocation.center,
-    //     notchMargin: 8 ,
-    //     elevation: 0,
-    //     notchSmoothness: NotchSmoothness.smoothEdge,
-    //     onTap: (index) => setState(() => _bottomNavIndex = index),
-    //     backgroundColor: CasaColors.white,
-    //
-    //   ),
-    //     // NavigationBar(
-    //     //   height: 80,
-    //     //   elevation: 0,
-    //     //   indicatorColor: Colors.transparent,
-    //     //   backgroundColor: CasaColors.white,
-    //     //   destinations: [
-    //     //     NavigationDestination(
-    //     //         icon: Icon(
-    //     //           Icons.home, ),
-    //     //         label: ''),
-    //     //     NavigationDestination(
-    //     //         icon: Icon(Icons.home),
-    //     //         label: ''),
-    //     //     NavigationDestination(
-    //     //         icon: Icon(Icons.home),
-    //     //         label: ''),
-    //     //     NavigationDestination(
-    //     //         icon: Icon(Icons.home),
-    //     //         label: ''),
-    //     //     NavigationDestination(
-    //     //         icon: Icon(Icons.home),
-    //     //         label: ''),
-    //     //   ],
-    //     //
-    //     // )
-    //     // BottomNavigationBar(
-    //     //     type: BottomNavigationBarType.fixed,
-    //     //     elevation: 0,
-    //     //     onTap: _selectPage,
-    //     //     backgroundColor: CasaColors.white,
-    //     //     unselectedItemColor: CasaColors.bottomIcons,
-    //     //     selectedItemColor: CasaColors.black,
-    //     //     currentIndex: _selectedPageIndex,
-    //     //     showSelectedLabels: false,
-    //     //     items: [
-    //     //       BottomNavigationBarItem(
-    //     //         icon: Icon(Icons.hail, size: 40,),
-    //     //         label: ''
-    //     //       ),
-    //     //       BottomNavigationBarItem(
-    //     //           icon: Icon(Icons.hail),
-    //     //           label: ''
-    //     //       ),
-    //     //       BottomNavigationBarItem(
-    //     //           icon: Icon(Icons.hail),
-    //     //           label: ''
-    //     //       ),
-    //     //       BottomNavigationBarItem(
-    //     //           icon: Icon(Icons.hail),
-    //     //           label: ''
-    //     //       ),
-    //     //       BottomNavigationBarItem(
-    //     //           icon: Icon(Icons.hail),
-    //     //           label: ''
-    //     //       ),
-    //     //
-    //     //     ],
-    //     //   ),
-    //
-    //   ),
-    //   floatingActionButtonLocation: FloatingActionButtonLocation.miniCenterDocked,
-    //   floatingActionButton: Padding(
-    //     padding: const EdgeInsets.only(bottom: 5.0, left: 5, right: 5),
-    //     child: FloatingActionButton(
-    //       onPressed: () {
-    //         Navigator.pushNamed(context, "/addPost");
-    //       },
-    //       elevation: 0,
-    //       backgroundColor: Colors.black,
-    //       child: Icon(
-    //         Icons.add,
-    //         color: Colors.white,
-    //         size: 30,
-    //       ),
-    //       shape: const CircleBorder(),
-    //     ),
-    //   ),
-    // );
   }
 }
 

@@ -1,9 +1,5 @@
 
-import 'dart:ui';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../CasaColors.dart';
@@ -32,7 +28,7 @@ class SignUpScreen extends StatelessWidget {
                 colors: [CasaColors.whiteBackground.withOpacity(0.2), CasaColors.whiteBackground],
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                stops: [0.0, 0.35],
+                stops: const [0.0, 0.35],
               ),
             ),
             child: Container(
@@ -42,7 +38,7 @@ class SignUpScreen extends StatelessWidget {
                 children: [
                    Text(
                     AppLocalizations.of(context)!.signUp,
-                    style: TextStyle(
+                    style: const TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 26
                     ),
@@ -60,12 +56,12 @@ class SignUpScreen extends StatelessWidget {
                       decoration: InputDecoration(
                         border: InputBorder.none,
                         hintText: AppLocalizations.of(context)!.name,
-                        hintStyle: TextStyle(
+                        hintStyle: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w400,
                           color: CasaColors.textGrey,
                         ),
-                        contentPadding: EdgeInsets.symmetric(vertical: 6, horizontal: 10),
+                        contentPadding: const EdgeInsets.symmetric(vertical: 6, horizontal: 10),
                       ),
                     ),
                   ),
@@ -82,12 +78,12 @@ class SignUpScreen extends StatelessWidget {
                       decoration: InputDecoration(
                         border: InputBorder.none,
                         hintText: AppLocalizations.of(context)!.e_mail,
-                        hintStyle: TextStyle(
+                        hintStyle: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w400,
                             color: CasaColors.textGrey
                         ),
-                        contentPadding: EdgeInsets.symmetric(vertical: 6, horizontal: 10),
+                        contentPadding: const EdgeInsets.symmetric(vertical: 6, horizontal: 10),
                       ),
                     ),
                   ),
@@ -102,14 +98,14 @@ class SignUpScreen extends StatelessWidget {
                     ),
                     child: TextField(
                       decoration: InputDecoration(
-                        border: InputBorder.none, // Без контура
+                        border: InputBorder.none,
                         hintText: AppLocalizations.of(context)!.password,
-                        hintStyle: TextStyle(
+                        hintStyle: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w400,
                             color: CasaColors.textGrey
                         ),
-                        contentPadding: EdgeInsets.symmetric(vertical: 6, horizontal: 10),
+                        contentPadding: const EdgeInsets.symmetric(vertical: 6, horizontal: 10),
                       ),
                     ),
                   ),
@@ -120,7 +116,7 @@ class SignUpScreen extends StatelessWidget {
                       children: [
                         Text(
                           AppLocalizations.of(context)!.haveAnAccount,
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: CasaColors.textGrey,
                               fontSize: 16,
                               fontWeight: FontWeight.w400
@@ -131,7 +127,7 @@ class SignUpScreen extends StatelessWidget {
                               Navigator.pushNamed(context, "/signIn");
                             },
                             child: Text(AppLocalizations.of(context)!.toSignIn,
-                              style: TextStyle(
+                              style: const TextStyle(
                                   color: CasaColors.textGrey,
                                   fontSize: 16,
                                   fontWeight: FontWeight.w400
@@ -159,7 +155,7 @@ class SignUpScreen extends StatelessWidget {
                         margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 80),
                         child: Text(
                           AppLocalizations.of(context)!.nextButtonTitle,
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Colors.white,
                               fontSize: 18,
                               fontWeight: FontWeight.w500

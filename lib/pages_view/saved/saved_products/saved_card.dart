@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../../../CasaColors.dart';
 import '../../../models/folders_model.dart';
 
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SavedCard extends StatelessWidget {
   const SavedCard({
@@ -16,7 +15,7 @@ class SavedCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
-    return Container(
+    return SizedBox(
         height: screenSize.width/2.5,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,9 +30,9 @@ class SavedCard extends StatelessWidget {
                   height: screenSize.height < 700
                       ? 90
                       : 117,
-                  margin: EdgeInsets.only(right: 2),
+                  margin: const EdgeInsets.only(right: 2),
                   child: ClipRRect(
-                    borderRadius: BorderRadius.only(
+                    borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(15),
                         bottomLeft: Radius.circular(15)
                     ),
@@ -51,9 +50,9 @@ class SavedCard extends StatelessWidget {
                       height: screenSize.height < 700
                           ? 45
                           : 57,
-                      margin: EdgeInsets.only(bottom: 2),
+                      margin: const EdgeInsets.only(bottom: 2),
                       child: ClipRRect(
-                        borderRadius: BorderRadius.only(
+                        borderRadius: const BorderRadius.only(
                           topRight: Radius.circular(15),
                         ),
                         child: Image.asset(
@@ -62,13 +61,13 @@ class SavedCard extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       width: screenSize.width/5.5,
                       height: screenSize.height < 700
                           ? 43
                           : 57,
                       child: ClipRRect(
-                        borderRadius: BorderRadius.only(
+                        borderRadius: const BorderRadius.only(
                           bottomRight: Radius.circular(15),
                         ),
                         child: Image.asset(
@@ -81,10 +80,10 @@ class SavedCard extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(height: 4,),
+            const SizedBox(height: 4,),
             Text(
               folder.name,
-              style: TextStyle(
+              style: const TextStyle(
                   color: CasaColors.folderNameColor,
                   fontSize: 16,
                   fontWeight: FontWeight.w600
@@ -92,11 +91,11 @@ class SavedCard extends StatelessWidget {
             ),
             RichText(
               text: TextSpan(
-                style: TextStyle(color: Colors.black, fontSize: 16),
+                style: const TextStyle(color: Colors.black, fontSize: 16),
                 children: <TextSpan>[
                   TextSpan(
                     text: '${folder.products.length} пости ',
-                    style: TextStyle(
+                    style: const TextStyle(
                         fontWeight: FontWeight.w400,
                         fontSize: 15,
                         color: CasaColors.black
@@ -104,7 +103,7 @@ class SavedCard extends StatelessWidget {
                   ),
                   TextSpan(
                     text: folder.createdAt,
-                    style: TextStyle(
+                    style: const TextStyle(
                         fontWeight: FontWeight.w400,
                         fontSize: 13,
                         color: CasaColors.textGrey

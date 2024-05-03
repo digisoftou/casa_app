@@ -20,11 +20,12 @@ class CategoryCards extends StatelessWidget {
       CategoryModel(icon: 'assets/svg_icons/category_icons/hat.svg', name: AppLocalizations.of(context)!.hat, bgImage: 'assets/categories_bg/hatBg.jpg'),
     ];
     final Size screenSize = MediaQuery.of(context).size;
-    return Container(
-      height: 100,
+    return
+    Container(
       width: screenSize.width,
-      margin: EdgeInsets.only(top: 5, bottom: 5),
+      margin: const EdgeInsets.only(top: 5, bottom: 5),
       child: ListView.builder(
+          padding: const EdgeInsets.only(left: 27),
           scrollDirection: Axis.horizontal,
           itemCount: categoriesList.length,
           itemBuilder: (context, index){
@@ -35,54 +36,54 @@ class CategoryCards extends StatelessWidget {
                 //   selectedTypeIndex = index;
                 // });
               },
-              child: Column(
-                children: [
-                  Stack(
-                    children: [
-                      Container(
-                        height: 70,
-                        width: 70,
-                        margin: EdgeInsets.symmetric(horizontal: 10),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(12),
-                          child: Image.asset(
-                            categoriesList[index].bgImage,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                      Container(
-                        height: 70,
-                        width: 70,
-                        decoration: BoxDecoration(
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Stack(
+                      children: [
+                        Container(
+                          height: 70 ,
+                          width: 70 ,
+                          margin: const EdgeInsets.symmetric(horizontal: 10),
+                          child: ClipRRect(
                             borderRadius: BorderRadius.circular(12),
-                            color: CasaColors.textSearchGrey.withOpacity(0.8)
-                        ),
-                        margin: EdgeInsets.symmetric(horizontal: 10),
-                        child: Center(
-                          child: SvgPicture.asset(
-                              categoriesList[index].icon
+                            child: Image.asset(
+                              categoriesList[index].bgImage,
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
-                      ),
-
-
-
-                    ],
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(top: 5),
-                    child: Text(categoriesList[index].name,
-                      style: TextStyle(
-                        color: CasaColors.textSearchGrey,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 12,
-                      ),),
-                  ),
-                ],
+                        Container(
+                          height: 70 ,
+                          width: 70,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12),
+                              color: CasaColors.textSearchGrey.withOpacity(0.8)
+                          ),
+                          margin: const EdgeInsets.symmetric(horizontal: 10),
+                          child: Center(
+                            child: SvgPicture.asset(
+                                categoriesList[index].icon
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(top: 5),
+                      child: Text(categoriesList[index].name,
+                        style: const TextStyle(
+                          color: CasaColors.textSearchGrey,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 12,
+                        ),),
+                    ),
+                  ],
+                ),
               ),
             );
           }),
+
     );
   }
 }

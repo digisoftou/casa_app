@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../CasaColors.dart';
@@ -53,7 +52,7 @@ class ProgramAppBar extends StatelessWidget {
             Positioned(
               right: 0,
               child: Container(
-                margin: EdgeInsets.only(left: 15),
+                margin: const EdgeInsets.only(left: 15),
                 child: SvgPicture.asset(
                     'assets/svg_icons/card.svg'
                 ),
@@ -75,24 +74,24 @@ class ProgramAppBar extends StatelessWidget {
           ),
           child: TextField(
             decoration: InputDecoration(
-              prefixIcon: Icon(
+              prefixIcon: const Icon(
                 Icons.search_sharp,
                 color: CasaColors.searchFieldBorder,
               ),
               suffixIcon: Container(
-                padding: EdgeInsets.all(5),
+                padding: const EdgeInsets.all(5),
                 child: SvgPicture.asset(
                     'assets/svg_icons/camera.svg'
                 ),
               ),
               border: InputBorder.none,
               hintText: AppLocalizations.of(context)!.search,
-              hintStyle: TextStyle(
+              hintStyle: const TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w200,
                   color: CasaColors.textSearchGrey
               ),
-              contentPadding: EdgeInsets.symmetric( horizontal: 10),
+              contentPadding: const EdgeInsets.symmetric( horizontal: 10),
             ),
           ),
         ),
