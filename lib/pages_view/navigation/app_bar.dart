@@ -1,4 +1,5 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -45,8 +46,28 @@ class ProgramAppBar extends StatelessWidget {
             ),
             Positioned(
               right: 40,
-              child: SvgPicture.asset(
-                  'assets/svg_icons/email.svg'
+              child: Stack(
+                children: [
+                  SvgPicture.asset(
+                      'assets/svg_icons/email.svg'
+                  ),
+                  Positioned(
+                    bottom: 2,
+                    right: 0,
+                    child: CircleAvatar(
+                      radius: 5,
+                      backgroundColor: CasaColors.red,
+                      child: Center(
+                        child: Text('3',
+                        style: TextStyle(
+                          fontSize: 7,
+                          fontWeight: FontWeight.w300,
+                          color: CasaColors.white
+                        ),),
+                      ),
+                    ),
+                  )
+                ],
               ),
             ),
             Positioned(

@@ -126,6 +126,9 @@ class SignUpScreen extends StatelessWidget {
                             onPressed: (){
                               Navigator.pushNamed(context, "/signIn");
                             },
+                            style: ButtonStyle(
+                              overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                            ),
                             child: Text(AppLocalizations.of(context)!.toSignIn,
                               style: const TextStyle(
                                   color: CasaColors.textGrey,

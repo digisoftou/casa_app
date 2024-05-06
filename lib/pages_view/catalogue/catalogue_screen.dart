@@ -1,4 +1,5 @@
 import 'package:casa_app/CasaColors.dart';
+import 'package:casa_app/models/product_model.dart';
 import 'package:casa_app/pages_view/catalogue/sliver_appbar_delegate.dart';
 import 'package:flutter/material.dart';
 
@@ -34,6 +35,10 @@ class _CatalogueScreenState extends State<CatalogueScreen> {
 
 
     final screenSize = MediaQuery.of(context).size;
+    print(screenSize.height);
+    final productRows = (productsList.length/2).ceil();
+    final maxMinSize = (productRows ) * (screenSize.height*0.4);
+
     return Scaffold(
       backgroundColor: CasaColors.white,
       body: Container(
@@ -76,6 +81,9 @@ class _CatalogueScreenState extends State<CatalogueScreen> {
                                   ),),
                                 TextButton(
                                     onPressed: (){},
+                                  style: ButtonStyle(
+                                    overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                  ),
                                     child: Row(
                                       children: [
                                         Text(AppLocalizations.of(context)!.viewAll,
@@ -90,7 +98,8 @@ class _CatalogueScreenState extends State<CatalogueScreen> {
                                           size: 20,
                                         )
                                       ],
-                                    ))
+                                    ),
+                                )
                               ],
                             ),
                           ),
@@ -104,8 +113,8 @@ class _CatalogueScreenState extends State<CatalogueScreen> {
                       )),
                   SliverPersistentHeader(
                       delegate: SliverAppbarDelegate(
-                        maxHeight: 900,
-                        minHeight: 900,
+                        maxHeight: maxMinSize + kBottomNavigationBarHeight,
+                        minHeight: maxMinSize + kBottomNavigationBarHeight,
                         child: Column(
                           children: [
                             Container(
@@ -121,6 +130,9 @@ class _CatalogueScreenState extends State<CatalogueScreen> {
                                     ),),
                                   TextButton(
                                       onPressed: (){},
+                                    style: ButtonStyle(
+                                      overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                                    ),
                                       child: Row(
                                         children: [
                                           Text(AppLocalizations.of(context)!.view,
@@ -135,7 +147,9 @@ class _CatalogueScreenState extends State<CatalogueScreen> {
                                             size: 20,
                                           )
                                         ],
-                                      ))
+                                      ),
+
+                                  )
                                 ],
                               ),
                             ),

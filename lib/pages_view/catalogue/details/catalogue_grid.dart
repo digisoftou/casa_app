@@ -20,8 +20,6 @@ class _CatalogueGridState extends State<CatalogueGrid> {
     final Size screenSize = MediaQuery.of(context).size;
 
     return   Expanded(
-      // width: screenSize.width,
-      // height: 400,
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 27),
         child: MasonryGridView.builder(
@@ -39,7 +37,7 @@ class _CatalogueGridState extends State<CatalogueGrid> {
                 // Navigator.pushNamed(context, '/productDetails', arguments: products[index]);
               },
               child: ConstrainedBox(
-                constraints: BoxConstraints(maxHeight: screenSize.height * 0.37),
+                constraints: BoxConstraints(maxHeight: screenSize.height * 0.38),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

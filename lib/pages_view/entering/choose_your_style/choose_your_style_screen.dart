@@ -45,7 +45,9 @@ class _ChooseYourStyleScreenState extends State<ChooseYourStyleScreen> {
                     ),
                   ),
                   IconButton(
-                      onPressed: (){},
+                      onPressed: (){
+                        Navigator.pushNamed(context, "/bottomNavigation");
+                      },
                       icon: const Icon(
                         Icons.close,
                         color: CasaColors.iconsColor,
@@ -128,13 +130,16 @@ class _ChooseYourStyleScreenState extends State<ChooseYourStyleScreen> {
                                 ],
                               ),
                             ),
-                            const Positioned(
+                            Positioned(
                                 bottom: 30,
                                 right: 20,
-                                child: Icon(
-                                  Icons.add_circle,
-                                  color: CasaColors.white,
-                                  size: 27,
+                                child: IconButton(
+                                  icon: Icon(
+                                    Icons.add_circle,
+                                    color: CasaColors.white,
+                                    size: 27,
+                                  ),
+                                  onPressed: () {  },
                                 )
                             )
 

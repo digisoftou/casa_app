@@ -103,11 +103,14 @@ class SignInScreen extends StatelessWidget {
                         onPressed: (){
                           //Navigator.pushNamed(context, "/signIn");
                         },
-                        style: ElevatedButton.styleFrom(
-                          elevation: 0,
-                          backgroundColor: CasaColors.grey,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(14.0),
+                        style: ButtonStyle(
+                          overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                          elevation: MaterialStateProperty.all<double>(0), // Ваша висота ефекту підйому
+                          backgroundColor: MaterialStateProperty.all<Color>(CasaColors.grey), // Ваш колір фону
+                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(14.0),
+                            ),
                           ),
                         ),
                         child: SizedBox(
@@ -143,11 +146,14 @@ class SignInScreen extends StatelessWidget {
                         onPressed: (){
                           //Navigator.pushNamed(context, "/signIn");
                         },
-                        style: ElevatedButton.styleFrom(
-                          elevation: 0,
-                          backgroundColor: CasaColors.grey,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(14.0),
+                        style: ButtonStyle(
+                          overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                          elevation: MaterialStateProperty.all<double>(0), // Ваша висота ефекту підйому
+                          backgroundColor: MaterialStateProperty.all<Color>(CasaColors.grey), // Ваш колір фону
+                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(14.0),
+                            ),
                           ),
                         ),
                         child: SizedBox(
@@ -200,6 +206,9 @@ class SignInScreen extends StatelessWidget {
                             onPressed: (){
                               Navigator.pushNamed(context, "/signUp");
                             },
+                            style: ButtonStyle(
+                              overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
+                            ),
                             child: Text(AppLocalizations.of(context)!.toSignUp,
                               style: TextStyle(
                                   color: CasaColors.textGrey,

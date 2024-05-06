@@ -21,7 +21,7 @@ class CasaColors{
   static const Color likedColor = Color(0xFF404040);
   static const Color folderNameColor = Color(0xFF494949);
   static const Color linkColor = Color(0xFF566794);
-
+  static const Color red = Color(0xFFFF0000);
 
 
 

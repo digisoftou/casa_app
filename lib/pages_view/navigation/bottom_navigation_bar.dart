@@ -34,7 +34,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
   ];
 
   int _bottomNavIndex = 0;
-
+  late FloatingActionButtonLocation buttonLocation = FloatingActionButtonLocation.miniCenterDocked;
+  late bool isTapped = false;
 
   @override
   Widget build(BuildContext context) {
@@ -42,9 +43,17 @@ class _BottomNavBarState extends State<BottomNavBar> {
       Scaffold(
         extendBody: true,
         body: pages[_bottomNavIndex],
-        floatingActionButtonLocation: FloatingActionButtonLocation.miniCenterDocked,
+        floatingActionButtonLocation: buttonLocation,
         floatingActionButton: FloatingActionButton(
           onPressed: () {
+            setState(() {
+              if(isTapped){
+                buttonLocation = FloatingActionButtonLocation.miniCenterDocked;
+              }else {
+                buttonLocation = FloatingActionButtonLocation.centerDocked;
+              }
+              isTapped = !isTapped;
+            });
            // Navigator.pushNamed(context, "/addPost");
           },
           elevation: 10,
@@ -75,7 +84,6 @@ class _BottomNavBarState extends State<BottomNavBar> {
                       color: isActive
                         ? Colors.black
                         : CasaColors.bottomIcons,
-
                   ),
                 ),
               ),

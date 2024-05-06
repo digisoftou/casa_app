@@ -18,6 +18,10 @@ List<ProductModel> productsList =[
   ProductModel(image: 'assets/catalogue_example/image2.jpg', name: 'Сорочка', price: 50),
   ProductModel(image: 'assets/catalogue_example/image3.png', name: 'Взуття', price: 80),
   ProductModel(image: 'assets/catalogue_example/image4.png', name: 'Тренч', price: 75),
+  ProductModel(image: 'assets/catalogue_example/image1.jpg', name: 'Сукня', price: 64),
+  ProductModel(image: 'assets/catalogue_example/image2.jpg', name: 'Сорочка', price: 50),
+  ProductModel(image: 'assets/catalogue_example/image3.png', name: 'Взуття', price: 80),
+  ProductModel(image: 'assets/catalogue_example/image4.png', name: 'Тренч', price: 75),
 ];
 
 List<ProductModel> garderobeList = [
